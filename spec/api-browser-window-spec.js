@@ -435,8 +435,7 @@ describe('BrowserWindow module', () => {
       expect(image.isEmpty()).to.be.true()
     })
 
-    // TODO(alexeykuzmin): [Ch67] Enable the test.
-    xit('preserves transparency', async () => {
+    it('preserves transparency', async () => {
       const w = await openTheWindow({
         show: false,
         width: 400,
@@ -2150,8 +2149,7 @@ describe('BrowserWindow module', () => {
       }
     })
 
-    // TODO(alexeykuzmin): [Ch67] Enable the test.
-    xit('subscribes to frame updates', (done) => {
+    it('subscribes to frame updates', (done) => {
       let called = false
       w.loadURL(`file://${fixtures}/api/frame-subscriber.html`)
       w.webContents.on('dom-ready', () => {
@@ -2166,9 +2164,7 @@ describe('BrowserWindow module', () => {
         })
       })
     })
-
-    // TODO(alexeykuzmin): [Ch67] Enable the test.
-    xit('subscribes to frame updates (only dirty rectangle)', (done) => {
+    it('subscribes to frame updates (only dirty rectangle)', (done) => {
       let called = false
       w.loadURL(`file://${fixtures}/api/frame-subscriber.html`)
       w.webContents.on('dom-ready', () => {
